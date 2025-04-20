@@ -4,9 +4,11 @@
   "main": "src/main.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon src/main",
+    "start": "node src/main",
+    "dev": "nodemon --inspect src/main",
     "lint": "eslint src",
-    "lint:fix": "eslint src --fix"
+    "lint:fix": "eslint src --fix",
+    "test": "LOG_LEVEL=silent ava"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +16,7 @@
   "description": "",
   "devDependencies": {
     "@eslint/js": "^9.24.0",
+    "ava": "^6.2.0",
     "eslint": "^9.24.0",
     "nodemon": "^3.1.9",
     "pino-pretty": "^13.0.0"
